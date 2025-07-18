@@ -1,0 +1,19 @@
+@import url('../../assets/fonts/Mark/stylesheet.css');
+
+section h1 {
+    font-family: "Mark Black", sans-serif;
+}
+
+
+section h2 {
+    font-family: "Mark Black", sans-serif;
+}
+
+section h3 {
+    font-family: "Mark Black", sans-serif;
+}
+
+section p,
+section li {
+    font-family: "DM Sans", sans-serif;
+}

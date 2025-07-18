@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRT Aroma Style Banner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="logo.svg" alt="CRT Aroma">
+                <span>CRT <strong>aroma</strong></span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Our Company</a>
+                <a href="#">Fragrances</a>
+                <a href="#">Flavours</a>
+                <a href="#">Ingredients</a>
+                <a href="#">Careers</a>
+                <a href="#">Our Ministry</a>
+            </nav>
+
+            <a href="#" class="cta-btn">
+                <span>&rarr;</span> Contact Us
+            </a>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <span class="badge">Crafting Global Luxury</span>
+            <h1>Aromatic Solutions <br> Crafted to Perfection</h1>
+            <p>
+                From our state-of-the-art atelier to markets around the globe, we craft every fragrance with
+                unparalleled precision, purity, and performance.
+            </p>
+            <a href="#" class="cta-btn light"><span>&rarr;</span> Contact us</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
+<style>
+    /* Reset + Base */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        background: #f9f9f9;
+    }
+
+    /* Navbar */
+    .navbar {
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 20px 20px 0 0;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: bold;
+        color: #d4145a;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        padding-bottom: 2px;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a.active {
+        color: #d4145a;
+        border-bottom-color: #d4145a;
+    }
+
+    .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #ff4314;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 999px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-btn.light {
+        background: #fff;
+        color: #ff4314;
+    }
+
+    /* Banner */
+    .banner {
+        margin-top: 140px;
+        border-radius: 20px;
+        background: url('banner1.jpg') no-repeat center center/cover;
+        padding: 80px 30px;
+        color: #fff;
+        position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .banner-content {
+        max-width: 600px;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .banner p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+        }
+
+        .banner h1 {
+            font-size: 1.75rem;
+        }
+
+        .navbar-content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
+</style>
