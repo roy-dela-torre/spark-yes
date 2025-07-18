@@ -4,8 +4,14 @@
         <div class="flex flex-wrap xl:flex-nowrap justify-between gap-[50px]">
             <div class="xxl:w-5/12 xl:w-4/12">
                 <div class="footer_content xl:max-w-[640px] flex flex-col max-[575px]:items-center items-start">
-                    <img loading="lazy" src="<?= get_stylesheet_directory_uri(); ?>/assets/img/global/footer_logo.png" alt="Spark Footer Logo" class="mb-8">
-                    <p class="text-white mb-[60px] max-[575px]:text-center text-start">Lorem ipsum dolor sit amet consectetur. Mauris habitant ac consequat risus urna ut quisque rhoncus. Tristique diam vitae mattis diam nunc vitae tincidunt donec diam.</p>
+                    <?php
+                    get_template_part('template/image', null, [
+                        'src' => get_stylesheet_directory_uri() . '/assets/img/global/footer_logo.png',
+                        'alt' => 'Spark Footer Logo',
+                        'class' => 'mb-8'
+                    ]);
+                    ?>
+                    <p class="!text-white mb-[60px] max-[575px]:text-center text-start">Lorem ipsum dolor sit amet consectetur. Mauris habitant ac consequat risus urna ut quisque rhoncus. Tristique diam vitae mattis diam nunc vitae tincidunt donec diam.</p>
 
                     <div class="soc_med flex flex-col max-[575px]:items-center">
                         <span class="font-bold text-white mb-[30px]">Follow Us</span>
@@ -73,7 +79,7 @@
         </div>
         <div class="w-full mt-[60px]">
             <div class="copy_write flex flex-col md:flex-row items-center justify-between">
-                <p class="text-white text-center md:text-left mb-4 md:mb-0">Copyright © <?= date("Y") ?> <a target="_blank" href="https://seo-hacker.com/sitemap.xml/" title="SEO Hacker Blog" class="underline">SEO Hacker</a>. Optimized and maintained by <a target="_blank" href="https://sean.si/" class="underline">Sean Si</a> of <a target="_blank" href="https://seo-hacker.net/" class="underline">SEO Hacker</a></p>
+                <p class="!text-white text-center md:text-left mb-4 md:mb-0">Copyright © <?= date("Y") ?> <a target="_blank" href="https://seo-hacker.com/sitemap.xml/" title="SEO Hacker Blog" class="underline">SEO Hacker</a>. Optimized and maintained by <a target="_blank" href="https://sean.si/" class="underline">Sean Si</a> of <a target="_blank" href="https://seo-hacker.net/" class="underline">SEO Hacker</a></p>
                 <div class="left_content flex items-center space-x-2">
                     <a href="<?= get_home_url(); ?>/terms-and-conditions/" target="_blank" rel="noopener noreferrer" class="hover:underline">Terms and Conditions</a>
                     <span class="text-white">|</span>

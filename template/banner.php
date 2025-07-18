@@ -5,10 +5,19 @@ $banner_data = isset($args) ? $args : [];
     <div class="wrapper">
         <div class="flex flex-wrap">
             <div class="max-w-[<?= esc_attr($banner_data['content_width'] ?? '1136px') ?>]">
-                <h1 class="text-white mb-[15px]"><?= esc_html($banner_data['banner_header'] ?? '') ?></h1>
-                <div class="content text-white">
-                    <?= $banner_data['banner_content'] ?? '' ?>
-                </div>
+                <?php if (!empty($banner_data['banner_header'])): ?>
+                    <h1 class="text-white mb-[15px]"><?= esc_html($banner_data['banner_header']) ?></h1>
+                <?php endif; ?>
+                <?php
+                if (!empty($banner_data['banner_content'])) {
+                    // Add class to <p> tags in the banner_content
+                    echo preg_replace(
+                        '/<p(\s+[^>]*)?>/',
+                        '<p$1 class="!text-white">',
+                        $banner_data['banner_content']
+                    );
+                }
+                ?>
             </div>
         </div>
     </div>

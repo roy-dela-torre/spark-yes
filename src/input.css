@@ -1,6 +1,4 @@
 @import "tailwindcss";
-
-
 :root {
     --red: #FF4314;
     --orange: #FF9514;
@@ -9,7 +7,7 @@
 }
 
 .red_btn {
-    @apply py-[12px] px-[24px] rounded-[2px] bg-[var(--red)] text-white w-fit block;
+    @apply py-[12px] px-[24px] rounded-[2px] bg-[var(--red)] text-white w-fit block text-[16px] not-italic;
 }
 
 .red_btn:hover {
@@ -17,7 +15,7 @@
 }
 
 .text-black {
-    color: var(--black);
+    @apply text-[var(--black)];
 }
 
 .section_padding {
@@ -120,7 +118,7 @@ textarea {
     @apply rounded-[1px] border border-[#E5E5E5] p-[15px] w-full;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     @apply border-none;
 }
 
@@ -135,28 +133,22 @@ textarea::placeholder {
     @apply text-[#878787] text-[16px] font-light leading-[24px] not-italic;
 }
 
-.wpcf7-form-control-wrap{
+.wpcf7-form-control-wrap {
     @apply w-full block;
 }
 
-
 h1 {
-    @apply text-white font-black not-italic leading-normal text-[35px] lg:text-[40px] xl:text-[50px] 2xl:text-[60px];
+    @apply text-white text-[35px] sm:text-[35px] md:text-[40px] lg:text-[50px] xl:text-[55px] 2xl:text-[60px] not-italic font-black leading-none mb-[15px] ;
 }
 
-h2 {
-    @apply text-[var(--black)] font-medium not-italic leading-normal mb-[15px] text-[24px] lg:text-[30px] xl:text-[35px] 2xl:text-[40px];
+h2{
+    @apply text-black not-italic text-[30px] lg:text-[35px] font-[600] leading-normal mb-[15px];
 }
 
-h3 {
-    @apply text-[var(--black)] font-medium not-italic leading-normal mb-[20px] text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[32px];
+h3{
+    @apply text-black not-italic text-[24px] font-[600] leading-normal mb-[20px];
 }
 
-p,
-li {
-    @apply text-[16px] font-light not-italic leading-[24px];
-}
-
-a {
-    @apply no-underline;
+p{
+    @apply text-[16px] font-light leading-[24px] not-italic text-[var(--p-text-black)];
 }

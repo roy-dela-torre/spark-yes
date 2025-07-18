@@ -9,8 +9,8 @@ $home_url = get_home_url();
         <div class="flex flex-col">
             <div class="w-full">
                 <div class="content max-w-[616px] z-10 relative">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Say Yes to Learning and Growth That Works</h1>
-                    <p class="text-white mb-[30px]">Be the spark that starts learning solutions and real impact. Our programs are designed to ignite growth, empower teams, and drive performance that lasts.</p>
+                    <h1>Say Yes to Learning and Growth That Works</h1>
+                    <p class="!text-white mb-[30px]">Be the spark that starts learning solutions and real impact. Our programs are designed to ignite growth, empower teams, and drive performance that lasts.</p>
                     <div class="flex-center flex-wrap gap-x-[30px] gap-y-[24px]">
                         <a href="<?= $home_url; ?>/contact-us/" target="_blank" rel="noopener noreferrer" class="red_btn font-semibold">Contact Us Now</a>
                         <a href="<?= $home_url; ?>/watch-our-video/" target="_blank" rel="noopener noreferrer" class="watch_our_video flex items-center gap-2 fontweight-semibold">
@@ -84,7 +84,13 @@ $home_url = get_home_url();
             <div class="item p-[30px] m-y-[10px] flex flex-col justify-end min-h-[380px]">
                 <div class="content">
                     <div class="svg">
-                        <img loading="lazy" src="<?= $img_path; ?>Team Building Activities.png" alt="Team Building Activities">
+                        <?php
+                        get_template_part('template/image', null, [
+                            'src' => $img_path . 'Team Building Activities.png',
+                            'alt' => 'Team Building Activities',
+                            'class' => ''
+                        ]);
+                        ?>
                     </div>
                     <h3>Team Building <br class="d-none d-sm-block"> Activities</h3>
                     <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
@@ -94,7 +100,13 @@ $home_url = get_home_url();
             <div class="item p-[30px] m-y-[10px] flex flex-col justify-end min-h-[380px]">
                 <div class="content">
                     <div class="svg">
-                        <img loading="lazy" src="<?= $img_path; ?>Organizational Development.png" alt="Organizational Development">
+                        <?php
+                        get_template_part('template/image', null, [
+                            'src' => $img_path . 'Organizational Development.png',
+                            'alt' => 'Organizational Development',
+                            'class' => ''
+                        ]);
+                        ?>
                     </div>
                     <h3>Organizational Development</h3>
                     <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
@@ -104,7 +116,13 @@ $home_url = get_home_url();
             <div class="item p-[30px] m-y-[10px] flex flex-col justify-end min-h-[380px]">
                 <div class="content">
                     <div class="svg">
-                        <img loading="lazy" src="<?= $img_path; ?>Micro-Credentials Certification.png" alt="Micro-Credentials Certification">
+                        <?php
+                        get_template_part('template/image', null, [
+                            'src' => $img_path . 'Micro-Credentials Certification.png',
+                            'alt' => 'Micro-Credentials Certification',
+                            'class' => ''
+                        ]);
+                        ?>
                     </div>
                     <h3>Micro-Credentials Certification</h3>
                     <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
@@ -114,7 +132,13 @@ $home_url = get_home_url();
             <div class="item p-[30px] m-y-[10px] flex flex-col justify-end min-h-[380px]">
                 <div class="content">
                     <div class="svg">
-                        <img loading="lazy" src="<?= $img_path; ?>Culture and Leadership Formation.png" alt="Culture and Leadership Formation">
+                        <?php
+                        get_template_part('template/image', null, [
+                            'src' => $img_path . 'Culture and Leadership Formation.png',
+                            'alt' => 'Culture and Leadership Formation',
+                            'class' => ''
+                        ]);
+                        ?>
                     </div>
                     <h3>Culture and Leadership Formation</h3>
                     <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
@@ -124,7 +148,13 @@ $home_url = get_home_url();
             <div class="item p-[30px] m-y-[10px] flex flex-col justify-end min-h-[380px]">
                 <div class="content">
                     <div class="svg">
-                        <img loading="lazy" src="<?= $img_path; ?>Team Building Activities.png" alt="Team Building Activities">
+                        <?php
+                        get_template_part('template/image', null, [
+                            'src' => $img_path . 'Team Building Activities.png',
+                            'alt' => 'Team Building Activities',
+                            'class' => ''
+                        ]);
+                        ?>
                     </div>
                     <h3>Team Building <br class="d-none d-sm-block"> Activities</h3>
                     <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
@@ -134,7 +164,13 @@ $home_url = get_home_url();
             <div class="item p-[30px] m-y-[10px] flex flex-col justify-end min-h-[380px]">
                 <div class="content">
                     <div class="svg">
-                        <img loading="lazy" src="<?= $img_path; ?>Organizational Development.png" alt="Organizational Development">
+                        <?php
+                        get_template_part('template/image', null, [
+                            'src' => $img_path . 'Organizational Development.png',
+                            'alt' => 'Organizational Development',
+                            'class' => ''
+                        ]);
+                        ?>
                     </div>
                     <h3>Organizational Development</h3>
                     <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
@@ -158,28 +194,52 @@ $home_url = get_home_url();
                 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[24px] w-full mb-60">
                     <div class="rounded-[2px] md:p-[30px] p-[20px] background-[#FFFCE] content background-[#FFFCE] flex flex-col">
                         <div class="icons flex-center-center rounded-[2px] mb-[20px]">
-                            <img loading="lazy" src="<?= $img_path; ?>Team Building Activities.png" alt="Team Building Activities">
+                            <?php
+                            get_template_part('template/image', null, [
+                                'src' => $img_path . 'Team Building Activities.png',
+                                'alt' => 'Team Building Activities',
+                                'class' => ''
+                            ]);
+                            ?>
                         </div>
                         <h3>Team Building <br class="d-none d-sm-block"> Activities</h3>
                         <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
                     </div>
                     <div class="rounded-[2px] md:p-[30px] p-[20px] background-[#FFFCE] content background-[#FFFCE] flex flex-col">
                         <div class="icons flex-center-center rounded-[2px] mb-[20px]">
-                            <img loading="lazy" src="<?= $img_path; ?>Team Building Activities.png" alt="Team Building Activities">
+                            <?php
+                            get_template_part('template/image', null, [
+                                'src' => $img_path . 'Team Building Activities.png',
+                                'alt' => 'Team Building Activities',
+                                'class' => ''
+                            ]);
+                            ?>
                         </div>
                         <h3>Team Building <br class="d-none d-sm-block"> Activities</h3>
                         <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
                     </div>
                     <div class="rounded-[2px] md:p-[30px] p-[20px] background-[#FFFCE] content background-[#FFFCE] flex flex-col">
                         <div class="icons flex-center-center rounded-[2px] mb-[20px]">
-                            <img loading="lazy" src="<?= $img_path; ?>Team Building Activities.png" alt="Team Building Activities">
+                            <?php
+                            get_template_part('template/image', null, [
+                                'src' => $img_path . 'Team Building Activities.png',
+                                'alt' => 'Team Building Activities',
+                                'class' => ''
+                            ]);
+                            ?>
                         </div>
                         <h3>Team Building <br class="d-none d-sm-block"> Activities</h3>
                         <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
                     </div>
                     <div class="rounded-[2px] md:p-[30px] p-[20px] background-[#FFFCE] content background-[#FFFCE] flex flex-col">
                         <div class="icons flex-center-center rounded-[2px] mb-[20px]">
-                            <img loading="lazy" src="<?= $img_path; ?>Team Building Activities.png" alt="Team Building Activities">
+                            <?php
+                            get_template_part('template/image', null, [
+                                'src' => $img_path . 'Team Building Activities.png',
+                                'alt' => 'Team Building Activities',
+                                'class' => ''
+                            ]);
+                            ?>
                         </div>
                         <h3>Team Building <br class="d-none d-sm-block"> Activities</h3>
                         <p>Lorem ipsum dolor sit amet consectetur. Mauris habitant ac</p>
@@ -187,7 +247,13 @@ $home_url = get_home_url();
                 </div>
                 <div class="w-full">
                     <div class="image">
-                        <img loading="lazy" src="<?= $img_path ?>What Sets Us Apart.jpg" alt="What Sets Us Apart">
+                        <?php
+                        get_template_part('template/image', null, [
+                            'src' => $img_path . 'What Sets Us Apart.jpg',
+                            'alt' => 'What Sets Us Apart',
+                            'class' => ''
+                        ]);
+                        ?>
                     </div>
                 </div>
             </div>
@@ -207,42 +273,78 @@ $home_url = get_home_url();
         <div class="w-full overflow-hidden">
             <div class="owl-carousel owl-theme" id="our_coaches">
                 <div class="item">
-                    <img loading="lazy" src="<?= $img_path ?>Bien Leofando.jpg" alt="Bien Leofando">
+                    <?php
+                    get_template_part('template/image', null, [
+                        'src' => $img_path . 'Bien Leofando.jpg',
+                        'alt' => 'Bien Leofando',
+                        'class' => ''
+                    ]);
+                    ?>
                     <div class="main_content">
                         <h3>Bien Leofando</h3>
                         <p>Certified Human Resources Professional</p>
                     </div>
                 </div>
                 <div class="item">
-                    <img loading="lazy" src="<?= $img_path ?>Prince Datu.jpg" alt="Prince Datu">
+                    <?php
+                    get_template_part('template/image', null, [
+                        'src' => $img_path . 'Prince Datu.jpg',
+                        'alt' => 'Prince Datu',
+                        'class' => ''
+                    ]);
+                    ?>
                     <div class="main_content">
                         <h3>Prince Datu</h3>
                         <p>Certified Transformational Coach</p>
                     </div>
                 </div>
                 <div class="item">
-                    <img loading="lazy" src="<?= $img_path ?>Vjohn Dizon.jpg" alt="Vjohn Dizon">
+                    <?php
+                    get_template_part('template/image', null, [
+                        'src' => $img_path . 'Vjohn Dizon.jpg',
+                        'alt' => 'Vjohn Dizon',
+                        'class' => ''
+                    ]);
+                    ?>
                     <div class="main_content">
                         <h3>Vjohn Dizon</h3>
                         <p>Certified Transformational Coach</p>
                     </div>
                 </div>
                 <div class="item">
-                    <img loading="lazy" src="<?= $img_path ?>Bryan Zafra.jpg" alt="Bryan Zafra">
+                    <?php
+                    get_template_part('template/image', null, [
+                        'src' => $img_path . 'Bryan Zafra.jpg',
+                        'alt' => 'Bryan Zafra',
+                        'class' => ''
+                    ]);
+                    ?>
                     <div class="main_content">
                         <h3>Bryan Zafra</h3>
                         <p>Business Owner and Marketing Practitioner</p>
                     </div>
                 </div>
                 <div class="item">
-                    <img loading="lazy" src="<?= $img_path ?>Caloy Capacillov.jpg" alt="Caloy Capacillov">
+                    <?php
+                    get_template_part('template/image', null, [
+                        'src' => $img_path . 'Caloy Capacillov.jpg',
+                        'alt' => 'Caloy Capacillov',
+                        'class' => ''
+                    ]);
+                    ?>
                     <div class="main_content">
                         <h3>Caloy Capacillov</h3>
                         <p>Serial Entrepreneur & Certified Securities Representative</p>
                     </div>
                 </div>
                 <div class="item">
-                    <img loading="lazy" src="<?= $img_path ?>Lec Toribio.jpg" alt="Lec Toribio">
+                    <?php
+                    get_template_part('template/image', null, [
+                        'src' => $img_path . 'Lec Toribio.jpg',
+                        'alt' => 'Lec Toribio',
+                        'class' => ''
+                    ]);
+                    ?>
                     <div class="main_content">
                         <h3>Lec Toribio</h3>
                         <p>Certified Motivational Speaker & Author</p>
@@ -267,7 +369,13 @@ $home_url = get_home_url();
             <div class="2xl:w-6/12 lg:w-7/12 w-full">
                 <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 gap-[20px] h-full">
                     <div class="image_large md:col-span-2">
-                        <img loading="lazy" src="<?= $img_path ?>Our Story Large.jpg" alt="Our Story" class="w-full h-full object-cover">
+                        <?php
+                        get_template_part('template/image', null, [
+                            'src' => $img_path . 'Our Story Large.jpg',
+                            'alt' => 'Our Story',
+                            'class' => 'w-full h-full object-cover'
+                        ]);
+                        ?>
                     </div>
                     <div class="image_small flex flex-col gap-[20px]">
                         <div class="inquire">
@@ -280,7 +388,13 @@ $home_url = get_home_url();
                             </div>
                         </div>
                         <div class="image h-full">
-                            <img loading="lazy" src="<?= $img_path ?>Our Story Small.jpg" alt="Our Story" class="object-cover h-full w-full">
+                            <?php
+                            get_template_part('template/image', null, [
+                                'src' => $img_path . 'Our Story Small.jpg',
+                                'alt' => 'Our Story',
+                                'class' => 'object-cover h-full w-full'
+                            ]);
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -294,7 +408,7 @@ $home_url = get_home_url();
                     ?>
                     <div class="content">
                         <span id="count1"></span>
-                        <p class="text-white">Lorem Ipsum</p>
+                        <p class="!text-white">Lorem Ipsum</p>
                     </div>
                 </div>
                 <div class="count">
@@ -303,7 +417,7 @@ $home_url = get_home_url();
                     ?>
                     <div class="content">
                         <span id="count2"></span>
-                        <p class="text-white">Lorem Ipsum</p>
+                        <p class="!text-white">Lorem Ipsum</p>
                     </div>
                 </div>
                 <div class="count">
@@ -312,7 +426,7 @@ $home_url = get_home_url();
                     ?>
                     <div class="content">
                         <span id="count3"></span>
-                        <p class="text-white">Lorem Ipsum</p>
+                        <p class="!text-white">Lorem Ipsum</p>
                     </div>
                 </div>
                 <div class="count">
@@ -321,7 +435,7 @@ $home_url = get_home_url();
                     ?>
                     <div class="content">
                         <span id="count4"></span>
-                        <p class="text-white">Lorem Ipsum</p>
+                        <p class="!text-white">Lorem Ipsum</p>
                     </div>
                 </div>
                 <div class="count">
@@ -330,7 +444,7 @@ $home_url = get_home_url();
                     ?>
                     <div class="content">
                         <span id="count5"></span>
-                        <p class="text-white">Lorem Ipsum</p>
+                        <p class="!text-white">Lorem Ipsum</p>
                     </div>
                 </div>
             </div>
@@ -378,9 +492,21 @@ $home_url = get_home_url();
                                     $img_height = $img_size ? $img_size[1] : '';
                                     $width_attr = $img_width ? 'width="' . intval($img_width) . '"' : '';
                                     $height_attr = $img_height ? 'height="' . intval($img_height) . '"' : '';
-                                    echo '<div class="logo_item" style="width:' . intval($img_width + 60) . 'px;"><img loading="lazy" src="' . esc_url($logo_url) . '" alt="' . esc_attr($alt_text) . '" ' . $width_attr . ' ' . $height_attr . '></div>';
+                                    echo '<div class="logo_item" style="width:' . intval($img_width + 60) . 'px;">';
+                                    get_template_part('template/image', null, [
+                                        'src' => $logo_url,
+                                        'alt' => $alt_text,
+                                        'class' => '',
+                                    ]);
+                                    echo '</div>';
                                 } else {
-                                    echo '<div class="logo_item"><img loading="lazy" src="' . htmlspecialchars($logo_url, ENT_QUOTES, 'UTF-8') . '" alt="' . htmlspecialchars($alt_text, ENT_QUOTES, 'UTF-8') . '"></div>';
+                                    echo '<div class="logo_item">';
+                                    get_template_part('template/image', null, [
+                                        'src' => $logo_url,
+                                        'alt' => $alt_text,
+                                        'class' => '',
+                                    ]);
+                                    echo '</div>';
                                 }
                             }
                         }
@@ -419,9 +545,21 @@ $home_url = get_home_url();
                                     $img_height = $img_size ? $img_size[1] : '';
                                     $width_attr = $img_width ? 'width="' . intval($img_width) . '"' : '';
                                     $height_attr = $img_height ? 'height="' . intval($img_height) . '"' : '';
-                                    echo '<div class="logo_item" style="width:' . intval($img_width + 60) . 'px;"><img loading="lazy" src="' . esc_url($logo_url) . '" alt="' . esc_attr($alt_text) . '" ' . $width_attr . ' ' . $height_attr . '></div>';
+                                    echo '<div class="logo_item" style="width:' . intval($img_width + 60) . 'px;">';
+                                    get_template_part('template/image', null, [
+                                        'src' => $logo_url,
+                                        'alt' => $alt_text,
+                                        'class' => '',
+                                    ]);
+                                    echo '</div>';
                                 } else {
-                                    echo '<div class="logo_item"><img loading="lazy" src="' . htmlspecialchars($logo_url, ENT_QUOTES, 'UTF-8') . '" alt="' . htmlspecialchars($alt_text, ENT_QUOTES, 'UTF-8') . '"></div>';
+                                    echo '<div class="logo_item">';
+                                    get_template_part('template/image', null, [
+                                        'src' => $logo_url,
+                                        'alt' => $alt_text,
+                                        'class' => '',
+                                    ]);
+                                    echo '</div>';
                                 }
                             }
                         }
@@ -455,7 +593,13 @@ $home_url = get_home_url();
                                 </div>
                                 <div class="people">
                                     <div class="image">
-                                        <img loading="lazy" src="<?= $img_path ?>carousel_buttons/owl_button_<?= $i + 1 ?>.png" alt="">
+                                        <?php
+                                        get_template_part('template/image', null, [
+                                            'src' => $img_path . 'carousel_buttons/owl_button_' . ($i + 1) . '.png',
+                                            'alt' => '',
+                                            'class' => ''
+                                        ]);
+                                        ?>
                                     </div>
                                     <div class="info">
                                         <p class="name">Lorem Ipsum</p>

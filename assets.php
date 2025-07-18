@@ -19,10 +19,14 @@ function theme_enqueue_all_assets()
     }, 1);
 
     // Local stylesheets
-    wp_enqueue_style('fonts-css', $css_path . '/fonts.css', array(), null);
     wp_enqueue_style('header-css', $css_path . '/header.css', array(), null);
     wp_enqueue_style('footer-css', $css_path . '/footer.css', array(), null);
     wp_enqueue_style('global-css', $css_path . '/global.css', array(), null);
+    // Preload global.css for faster styling (hooked into wp_head manually)
+    add_action('wp_head', function () use ($css_path, $theme_dir) {
+        echo '<link rel="preload" as="style" href="' . $css_path . '/global.css" />';
+    }, 1);
+    wp_enqueue_style('mark-font-css', $theme_dir . '/assets/fonts/Mark/stylesheet.css', array(), null);
 
     // jQuery (from local)
     wp_enqueue_script('jquery-cdn', $theme_dir . '/inc/js/jquery.min.js', array(), null, true);
