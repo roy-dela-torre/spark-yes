@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --red: #FF4314;
+  --orange: #FF9514;
+  --black: #111;
+  --p-text-black: rgba(51, 51, 51, 1);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Mark Black', sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+h2,
+h3 {
+  color: var(--black);
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+  line-height: 150%;
+}
+
+header#mainHeader.header-open {
+  background-color: black !important;
+}
+
+#studio-companion-notice {
+  display: none !important;
+}
+
+#navbarToggle.open span:nth-child(1),
+#navbarToggle.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#navbarToggle.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+#navbarToggle.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+footer span {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+:focus-visible {
+  outline: none;
+}

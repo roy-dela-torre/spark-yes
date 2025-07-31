@@ -1,0 +1,90 @@
+header a {
+    color: #FFF;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+}
+
+header nav {
+    max-width: 1576px;
+    margin: 0 auto;
+}
+
+header ul#menu-main-menu {
+    gap: 0 30px;
+}
+
+
+
+header#mainHeader {
+    padding: 0 28px;
+}
+
+
+header#mainHeader ul.sub-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: white;
+    padding: 30px;
+    flex-direction: column;
+    gap: 20px 0;
+    top: 100px;
+}
+
+header#mainHeader ul.sub-menu>li {
+    list-style: none;
+    padding: 0;
+}
+
+header#mainHeader ul.sub-menu>li a {
+    color: var(--black);
+    white-space: pre;
+}
+
+header#mainHeader ul.sub-menu>li>a:hover,
+header ul#menu-main-menu>li:hover>a {
+    transition: .5s ease all;
+    -webkit-transition: .5s ease all;
+    -moz-transition: .5s ease all;
+    -ms-transition: .5s ease all;
+    -o-transition: .5s ease all;
+    color: var(--red);
+}
+
+header#mainHeader ul#menu-main-menu>li:hover ul.sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (width < 1024px) {
+    header#mainHeader ul.sub-menu {
+        position: relative;
+        background-color: transparent;
+        padding: 0 0 0 20px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    header#mainHeader ul.sub-menu>li a {
+        color: white;
+        white-space: wrap;
+    }
+}
+
+@media (max-width: 767px) {
+
+    header#mainHeader {
+        padding: 10px 18px;
+    }
+}

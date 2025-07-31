@@ -1,0 +1,52 @@
+# ========================
+# Node & build dependencies
+# ========================
+node_modules/
+dist/
+build/
+.cache/
+*.log
+
+# ========================
+# IDE/editor files
+# ========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Environment / Secrets
+# ========================
+.env
+.env.*
+*.pem
+*.key
+*.pub
+*.ppk
+*.sftp-config.json
+
+# ========================
+# WordPress-specific (theme-level)
+# ========================
+/uploads/
+.sass-cache/
+/*.zip
+
+# If you're compiling CSS/JS
+/assets/css/*.map
+/assets/js/*.map
+
+# Optional: ignore backup or temp files
+*~
+*.bak
+*.tmp
+
+
+UsersDEV-PC.sshid_ed25519.pubsparkyes.zip

@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+.red_btn {
+    @apply py-[12px] px-[24px] rounded-[2px] bg-[var(--red)] text-white w-fit block text-[16px] not-italic;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.red_btn:hover {
+    @apply bg-[var(--orange)] transition-all duration-500 ease-in-out;
+}
+
+.section_padding {
+    @apply 2xl:py-[100px] 2xl:px-[30px] lg:py-[70px] lg:px-[30px] py-[50px] px-[20px];
+}
+
+.mb-60 {
+    @apply mb-[30px] lg:mb-[45px] xl:mb-[60px];
+}
+
+.flex-center-center {
+    @apply flex items-center justify-center;
+}
+
+.flex-center {
+    @apply flex items-center;
+}
+
+.flex-col-center-center {
+    @apply flex items-center justify-center flex-col;
+}
+
+.flex-col-center {
+    @apply flex items-center flex-col;
+}
+
+.wrapper {
+    @apply max-w-[1576px] mx-auto w-full;
+}
+
+
+[popover]:-internal-popover-in-top-layer::-webkit-backdrop {
+    @apply bg-black/50;
+}
+
+[popover]:-internal-popover-in-top-layer::backdrop {
+    @apply bg-black/50;
+}
+
+[popover]:popover-open:not(dialog) {
+    @apply border-none w-full h-screen bg-transparent flex items-center justify-center;
+}
+
+[popover]:popover-open:not(dialog) .content {
+    @apply bg-white;
+}
+
+input:focus-visible {
+    @apply outline-none shadow-none;
+}
+
+form {
+    @apply mb-0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    @apply m-0 appearance-none;
+}
+
+input[type="number"] {
+    @apply appearance-none;
+    /* For Firefox */
+}
+
+form.wpcf7-form.submitting .wpcf7-spinner {
+    @apply block;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    @apply my-[10px] mx-auto;
+}
+
+form.wpcf7-form.init .wpcf7-spinner {
+    @apply hidden;
+}
+
+ul,
+ol {
+    @apply mb-0 mt-[15px] pl-[20px];
+}
+
+:is(dir, menu, ol, ul) :is(dir, menu, ol, ul) ul,
+:is(dir, menu, ol, ul) ul {
+    @apply list-disc;
+}
+
+ul+p {
+    margin-top: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+textarea {
+    @apply rounded-[1px] border border-[#E5E5E5] p-[15px] w-full;
+}
+
+input[type="submit"] {
+    @apply border-none;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder,
+input[type="search"]::placeholder,
+input[type="url"]::placeholder,
+textarea::placeholder {
+    @apply text-[#878787] text-[16px] font-light leading-[24px] not-italic;
+}
+
+.wpcf7-form-control-wrap {
+    @apply w-full block;
+}
+
+h1 {
+    @apply text-white text-[35px] md:text-[40px] lg:text-[50px] 2xl:text-[60px] not-italic font-black leading-none mb-[15px];
+}
+
+h2 {
+    @apply not-italic text-[25px] lg:text-[30px] xl:text-[35px] font-[600] leading-normal mb-[15px];
+}
+
+h3 {
+    @apply not-italic text-[20px] lg:text-[22px] xl:text-[24px] font-[600] leading-normal mb-[20px];
+}
+
+p {
+    @apply text-[16px] font-light leading-[24px] not-italic text-[#333];
+}
+
+.item:hover a {
+    @apply animate-[mt-animate] opacity-100 relative mt-[30px];
+    animation: mt-animate 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    -webkit-animation: mt-animate 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes mt-animate {
+    from {
+        margin-top: 0;
+    }
+
+    to {
+        margin-top: 30px;
+    }
+}
+
+.item a {
+    @apply absolute opacity-0;
+}
+
+.grid_box {
+    @apply grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+}
+
+.grid_box_cards {
+    @apply rounded-[2px] md:p-[30px] p-[20px] flex flex-col;
+}
+
+.owl_button {
+    @apply w-[15px] h-[15px] rounded-full bg-white border-none z-2;
+}
