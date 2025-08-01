@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sparkyesinnovat/public_html/wp-content/themes/spark-yes
+    - /bin/cp -r * $DEPLOYPATH
