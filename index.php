@@ -25,10 +25,16 @@ $home_url = get_home_url();
                         </button>
                         <?php
                         get_template_part('template/modal', null, [
-                            'video' => '<video controls width="100%" poster="' . esc_url(get_template_directory_uri() . '/assets/img/homepage/Spark Profile Reel 2025 (Landscape).jpg') . '">
-                                <source src="' . esc_url(get_template_directory_uri() . '/assets/videos/homepage/Spark Profile Reel 2025 (Landscape).mp4') . '" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>'
+                            'video' => '
+                                <video controls width="100%" poster="' . esc_url($img_path . 'Spark Profile Reel 2025 (Landscape).jpg') . '" class="hidden md:block">
+                                    <source src="' . esc_url(get_template_directory_uri() . '/assets/videos/homepage/Spark Profile Reel 2025 (Landscape).mp4') . '" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video controls width="100%" poster="' . esc_url($img_path . 'Spark Profile Reel 2025 (Landscape).jpg') . '" class="block md:hidden">
+                                    <source src="' . esc_url(get_template_directory_uri() . '/assets/videos/homepage/Spark Profile Reel 2025.mp4') . '" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            '
                         ]);
                         ?>
                     </div>
@@ -181,25 +187,25 @@ $home_url = get_home_url();
                         [
                             'title' => 'Discover',
                             'desc' => 'Gain a clear understanding of your organization’s current dynamics, strengths, and areas for growth through data-informed assessments and collaborative conversations.',
-                            'img'  => 'Team Building Activities.png',
+                            'img'  => 'Discover.png',
                             'alt'  => 'Discover',
                         ],
                         [
                             'title' => 'Deepen',
                             'desc' => 'Cultivate a resilient and adaptive workplace culture by aligning values, behaviors, and systems to support long-term organizational health.',
-                            'img'  => 'Team Building Activities.png',
+                            'img'  => 'Deepen.png',
                             'alt'  => 'Deepen',
                         ],
                         [
                             'title' => 'Define',
                             'desc' => 'Engage in results-oriented coaching to clarify leadership direction, shape mindset shifts, and drive sustainable transformation at all levels.',
-                            'img'  => 'Team Building Activities.png',
+                            'img'  => 'Define.png',
                             'alt'  => 'Define',
                         ],
                         [
                             'title' => 'Develop',
                             'desc' => 'Strengthen team capabilities through structured training, micro-credentials, and upskilling programs tailored to your organization’s evolving needs.',
-                            'img'  => 'Team Building Activities.png',
+                            'img'  => 'Develop.png',
                             'alt'  => 'Develop',
                         ],
                     ];
@@ -241,7 +247,7 @@ $home_url = get_home_url();
             <div class="header flex items-center flex-col mx-auto px-[20px] mb-60 max-w-[650px]">
                 <h2 class="text-center">Meet Our Core Coaches</h2>
                 <p class="text-center mb-[30px]">SPARK’s coaches and trainers bring over 77 years of combined experience across corporate, academic, and enterprise settings, ensuring every session is grounded in real-world practice. They lead with empathy, expertise, and purpose—delivering learning experiences that are relevant, engaging, and built for lasting impact.</p>
-                <a href="<?= $home_url ?>/" target="_blank" rel="noopener noreferrer" class="red_btn">Learn More</a>
+                <a href="<?= $home_url ?>/our-coaches" target="_blank" rel="noopener noreferrer" class="red_btn">Learn More</a>
             </div>
         </div>
         <div class="w-full overflow-hidden">
@@ -254,7 +260,7 @@ $home_url = get_home_url();
                 ],
                 [
                     'name' => 'Prince Datu',
-                    'title' => 'Certified Transformational Coach',
+                    'title' => 'Enterprise and Sales Coach',
                     'img' => 'Prince Datu.jpg',
                 ],
                 [
@@ -302,7 +308,7 @@ $home_url = get_home_url();
 
 <section class="section_padding our_story">
     <div class="wrapper">
-        <div class="flex flex-wrap lg:flex-nowrap gap-[50px]">
+        <div class="flex flex-wrap lg:flex-nowrap gap-[50px] mb-60">
             <div class="2xl:w-6/12 lg:w-5/12">
                 <div class="content">
                     <h2>Our Story</h2>
@@ -345,13 +351,13 @@ $home_url = get_home_url();
                 </div>
             </div>
         </div>
-        <div class="w-full mt-[60px]">
+        <div class="w-full">
             <div class="red_box flex flex-wrap items-center px-30 py-20 gap-[24px] rounded-[2px]">
                 <div class="count">
                     <?php
                     echo file_get_contents($img_path . '/count.svg');
                     ?>
-                    <div class="content">
+                    <div class="content gap-y-[12px] flex-col flex">
                         <span id="count1"></span>
                         <p class="!text-white">Lorem Ipsum</p>
                     </div>
@@ -360,7 +366,7 @@ $home_url = get_home_url();
                     <?php
                     echo file_get_contents($img_path . '/count.svg');
                     ?>
-                    <div class="content">
+                    <div class="content gap-y-[12px] flex-col flex">
                         <span id="count2"></span>
                         <p class="!text-white">Lorem Ipsum</p>
                     </div>
@@ -369,7 +375,7 @@ $home_url = get_home_url();
                     <?php
                     echo file_get_contents($img_path . '/count.svg');
                     ?>
-                    <div class="content">
+                    <div class="content gap-y-[12px] flex-col flex">
                         <span id="count3"></span>
                         <p class="!text-white">Lorem Ipsum</p>
                     </div>
@@ -378,7 +384,7 @@ $home_url = get_home_url();
                     <?php
                     echo file_get_contents($img_path . '/count.svg');
                     ?>
-                    <div class="content">
+                    <div class="content gap-y-[12px] flex-col flex">
                         <span id="count4"></span>
                         <p class="!text-white">Lorem Ipsum</p>
                     </div>
@@ -387,7 +393,7 @@ $home_url = get_home_url();
                     <?php
                     echo file_get_contents($img_path . '/count.svg');
                     ?>
-                    <div class="content">
+                    <div class="content gap-y-[12px] flex-col flex">
                         <span id="count5"></span>
                         <p class="!text-white">Lorem Ipsum</p>
                     </div>
@@ -515,21 +521,21 @@ $home_url = get_home_url();
         </div>
 </section>
 
-<section class="section_padding testimonial">
+<section class="section_padding testimonial bg-[#FFFAF5]">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="w-full">
-                    <div class="header mx-auto d-flex align-items-center flex-column">
+                    <div class="header max-w-[650px]">
                         <h2 class="text-center">Testimonial</h2>
                         <p class="text-center">Hear directly from the organizations and individuals we've worked with—leaders, teams, and learners who’ve experienced the impact of SPARK’s programs. Their stories highlight how tailored, purpose-driven learning can create lasting change.</p>
                     </div>
                 </div>
                 <div class="w-full">
-                    <div class="header mx-auto mb-20">
+                    <div class="mb-[20px]">
                         <p class="text-center">Trusted by:</p>
                     </div>
-                    <div class="owl-carousel owl-theme" id="testimonial">
+                    <div class="owl-carousel owl-theme !flex flex-col-reverse gap-y-[50px] md:gap-y-[70px] lg:gap-y-[100px]" id="testimonial">
                         <?php for ($i = 0; $i < 5; $i++): ?>
                             <div class="item">
                                 <div class="main_content">
@@ -562,9 +568,10 @@ $home_url = get_home_url();
 
 <section class="section_padding contact_us">
     <div class="wrapper">
-        <div class="flex items-center flex-wrap lg:flex-nowrap gap-[50px] contact_us_bg px-[30px] py-[40px] md:px-[50px] md:py-[60px] lg:px-[80px] lg:py-[80px] xl:px-[114px] xl:py-[150px]">
+        <div class="flex items-center flex-wrap lg:flex-nowrap gap-[50px] contact_us_bg px-[30px] py-[40px] md:px-[70px] md:py-[60px] lg:px-[80px] lg:py-[80px] xl:px-[114px] xl:py-[150px] bg-white">
             <div class="lg:w-7/12 lg:pe-5">
-                <div class="form w-full p-[30px] md:p-[40px] max-w-full lg:max-w-[776px] border-t-[5px] border-[#ff4314] border-solid background-[#FFFAF5]">
+                <div class="form w-full py-[30px] px-[20px] md:p-[40px] max-w-full lg:max-w-[776px] border-t-[5px] border-[#ff4314] border-solid bg-[#FFFAF5]">
+                    <h3 class="mb-[30px]">Let’s Spark Growth Together</h3>
                     <?= do_shortcode('[contact-form-7 id="20a6980" title="Contact Us (Home page)"]') ?>
                 </div>
             </div>
@@ -640,11 +647,11 @@ $home_url = get_home_url();
     jQuery(document).ready(function($) {
         // Set custom images for owl dots in #testimonial carousel
         var buttonImages = [
-            '<?= get_template_directory_uri(); ?>/assets/img/homepage/carousel_buttons/owl_button_1.png',
-            '<?= get_template_directory_uri(); ?>/assets/img/homepage/carousel_buttons/owl_button_2.png',
-            '<?= get_template_directory_uri(); ?>/assets/img/homepage/carousel_buttons/owl_button_3.png',
-            '<?= get_template_directory_uri(); ?>/assets/img/homepage/carousel_buttons/owl_button_4.png',
-            '<?= get_template_directory_uri(); ?>/assets/img/homepage/carousel_buttons/owl_button_5.png'
+            '<?= $img_path ?>/carousel_buttons/owl_button_1.png',
+            '<?= $img_path ?>/carousel_buttons/owl_button_2.png',
+            '<?= $img_path ?>/carousel_buttons/owl_button_3.png',
+            '<?= $img_path ?>/carousel_buttons/owl_button_4.png',
+            '<?= $img_path ?>/carousel_buttons/owl_button_5.png'
         ];
 
         function applyOwlDotImages() {

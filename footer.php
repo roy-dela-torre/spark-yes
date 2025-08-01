@@ -16,17 +16,17 @@
                     <div class="soc_med flex flex-col max-[575px]:items-center">
                         <span class="font-bold text-white mb-[30px]">Follow Us</span>
                         <div class="gap-x-[15px] flex items-center">
-                            <a href="http://facebook.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
+                            <a href="http://fb.com/sparkyesph" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
                                 <?php
                                 echo file_get_contents($img_path . '/facebook.svg');
                                 ?>
                             </a>
-                            <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
+                            <a href="http://linkedin.com/company/spark-yes" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
                                 <?php
                                 echo file_get_contents($img_path . '/linkedin.svg');
                                 ?>
                             </a>
-                            <a href="http://instagram.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
+                            <a href="https://www.instagram.com/sparkyesph/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
                                 <?php
                                 echo file_get_contents($img_path . '/instagram.svg');
                                 ?>
@@ -70,7 +70,7 @@
                                 <a href="tel:+0905 374 2094" class="hover:underline">0905 374 2094</a>
                             </li>
                             <li>
-                                5F, Phinma Plaza, 39 Plaza Drive, Rockwell Center, Makati City
+                                <a href="https://maps.app.goo.gl/7wFxwbtoHkHyiDsD8" target="_blank" rel="noopener noreferrer">5F, Phinma Plaza, 39 Plaza Drive, Rockwell Center, Makati City</a>
                             </li>
                         </ul>
                     </div>

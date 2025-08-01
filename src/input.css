@@ -15,7 +15,7 @@
 }
 
 .mb-60 {
-    @apply mb-[30px] lg:mb-[45px] xl:mb-[60px];
+    @apply mb-[30px] md:mb-[45px] lg:mb-[60px];
 }
 
 .flex-center-center {
@@ -142,7 +142,7 @@ h3 {
 }
 
 p {
-    @apply text-[16px] font-light leading-[24px] not-italic text-[#333];
+    @apply text-[16px] font-light leading-[24px] not-italic text-[#333] mb-[1em] last:mb-0;
 }
 
 .item:hover a {
@@ -175,4 +175,8 @@ p {
 
 .owl_button {
     @apply w-[15px] h-[15px] rounded-full bg-white border-none z-2;
+}
+
+.header{
+    @apply mx-auto flex items-center flex-col mb-[30px] md:mb-[45px] lg:mb-[60px];
 }

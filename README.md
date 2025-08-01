@@ -180,5 +180,5 @@ git add .
 git commit -m "Temporary changes on server"
 
 git push origin main
- 
+
 git remote set-url origin https://github.com/SEO-Hacker-Web-Dev/spark-yes.git

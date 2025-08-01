@@ -59,3 +59,7 @@ footer span {
 :focus-visible {
   outline: none;
 }
+
+section .owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: 0;
+}
