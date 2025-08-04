@@ -178,5 +178,5 @@ p {
 }
 
 .header{
-    @apply mx-auto flex items-center flex-col mb-[30px] md:mb-[45px] lg:mb-[60px];
+    @apply mx-auto flex items-center mb-[30px] md:mb-[45px] lg:mb-[60px];
 }

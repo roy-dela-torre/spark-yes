@@ -182,3 +182,17 @@ git commit -m "Temporary changes on server"
 git push origin main
 
 git remote set-url origin https://github.com/SEO-Hacker-Web-Dev/spark-yes.git
+
+-------------------------
+🔄 MANUAL DEPLOYMENT VIA RSYNC
+-------------------------
+
+To deploy from your local repository clone to the live theme directory:
+
+```bash
+cd /home/sparkyesinnovnat/repositories/spark-yes  # Or wherever your repo is cloned
+git pull origin main
+/bin/rsync -a --exclude=".git" --exclude=".cpanel.yml" ./ /home/sparkyesinnovnat/public_html/wp-content/themes/spark-yes
+```
+
+This ensures only tracked files are copied, excluding Git metadata and deployment config.

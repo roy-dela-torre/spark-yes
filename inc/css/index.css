@@ -309,7 +309,7 @@ section.our_story .red_box>div {
     display: flex;
     align-items: center;
     gap: 0 20px;
-    min-width: 180px;
+    min-width: 250px;
 }
 
 section.our_story .red_box span {
@@ -570,19 +570,20 @@ section.contact_us a {
         max-height: 400px;
         object-fit: cover;
     }
-}
 
-@media (max-width: 575px) {
     section.our_story .red_box>div:not(:last-child)::after {
         display: none;
     }
 
-    section.our_story .red_box {
-        padding: 30px 20px;
-    }
-
     section.our_story .red_box>div {
         justify-content: start;
+    }
+}
+
+@media (max-width: 575px) {
+
+    section.our_story .red_box {
+        padding: 30px 20px;
     }
 
     section.what_sets_us_appart .header>* {

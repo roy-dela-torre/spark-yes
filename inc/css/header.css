@@ -50,7 +50,7 @@ header#mainHeader ul.sub-menu>li a {
     white-space: pre;
 }
 
-header#mainHeader.menu-open{
+header#mainHeader.menu-open {
     background-color: black;
 }
 
@@ -69,6 +69,10 @@ header#mainHeader ul#menu-main-menu>li:hover ul.sub-menu {
     flex-direction: column;
 }
 
+header#mainHeader div#navbar-default {
+    overflow: unset;
+}
+
 @media (width < 1024px) {
     header#mainHeader ul.sub-menu {
         position: relative;
@@ -83,6 +87,10 @@ header#mainHeader ul#menu-main-menu>li:hover ul.sub-menu {
     header#mainHeader ul.sub-menu>li a {
         color: white;
         white-space: wrap;
+    }
+
+    header#mainHeader div#navbar-default {
+        overflow-y: scroll;
     }
 }
 

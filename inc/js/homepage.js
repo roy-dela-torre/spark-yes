@@ -118,26 +118,26 @@ $(document).ready(function () {
         }
     });
 
-    function counter(id, start, end, duration) {
-        let obj = document.getElementById(id),
-            current = start,
-            range = end - start,
-            increment = end > start ? 1 : -1,
-            step = Math.abs(Math.floor(duration / range)),
-            timer = setInterval(() => {
-                current += increment;
-                obj.textContent = current + "+";
-                if (current == end) {
-                    clearInterval(timer);
-                }
-            }, step);
-    }
-    counter("count1", 0, 400, 3000);
-    counter("count2", 100, 50, 2500);
-    counter("count3", 0, 40, 3000);
-    counter("count3", 0, 40, 3000);
-    counter("count4", 0, 100, 3000);
-    counter("count5", 0, 100, 3000);
+    // function counter(id, start, end, duration) {
+    //     let obj = document.getElementById(id),
+    //         current = start,
+    //         range = end - start,
+    //         increment = end > start ? 1 : -1,
+    //         step = Math.abs(Math.floor(duration / range)),
+    //         timer = setInterval(() => {
+    //             current += increment;
+    //             obj.textContent = current + "+";
+    //             if (current == end) {
+    //                 clearInterval(timer);
+    //             }
+    //         }, step);
+    // }
+    // counter("count1", 0, 400, 3000);
+    // counter("count2", 100, 50, 2500);
+    // counter("count3", 0, 40, 3000);
+    // counter("count3", 0, 40, 3000);
+    // counter("count4", 0, 100, 3000);
+    // counter("count5", 0, 100, 3000);
 
 
     // Common carousel options for logo rows
@@ -192,4 +192,18 @@ $(document).ready(function () {
         { min: 768, size: 2 },
         { min: 0, size: 1 }
     ]);
+
+    setEqualHeightForSection('section.core_programs', 'p', [
+        { min: 1200, size: 4 },
+        { min: 992, size: 3 },
+        { min: 768, size: 2 },
+        { min: 0, size: 1 }
+    ]);
+
+
+    $("section.core_programs .item").each(function () { 
+        var currentHeight = $(this).outerHeight(); // includes padding & border
+        var newHeight = currentHeight + 78; // Adjusted height
+        $(this).css('min-height', newHeight + 'px');
+    });
 });

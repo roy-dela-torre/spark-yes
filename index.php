@@ -30,7 +30,7 @@ $home_url = get_home_url();
                                     <source src="' . esc_url(get_template_directory_uri() . '/assets/videos/homepage/Spark Profile Reel 2025 (Landscape).mp4') . '" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <video controls width="100%" poster="' . esc_url($img_path . 'Spark Profile Reel 2025 (Landscape).jpg') . '" class="block md:hidden">
+                                <video controls width="100%" class="block md:hidden sm:min-height-[400px]">
                                     <source src="' . esc_url(get_template_directory_uri() . '/assets/videos/homepage/Spark Profile Reel 2025.mp4') . '" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -74,7 +74,7 @@ $home_url = get_home_url();
 
 <section class="section_padding core_programs">
     <div class="wrapper">
-        <div class="header flex align-center justify-between gap-x-[50px] gap-y-[30px] flex-wrap mb-60">
+        <div class="header flex align-center justify-between gap-x-[50px] gap-y-[30px] flex-wrap mb-60 !flex-direction-row">
             <div class="left_content">
                 <h2>Core Programs</h2>
                 <p>Our core programs are designed to address real-world challenges in leadership, collaboration, and professional growth. Each offering is built on experiential learning principles, ensuring relevance, engagement, and long-term impact for individuals and organizations.</p>
@@ -353,51 +353,30 @@ $home_url = get_home_url();
         </div>
         <div class="w-full">
             <div class="red_box flex flex-wrap items-center px-30 py-20 gap-[24px] rounded-[2px]">
-                <div class="count">
-                    <?php
-                    echo file_get_contents($img_path . '/count.svg');
-                    ?>
-                    <div class="content gap-y-[12px] flex-col flex">
-                        <span id="count1"></span>
-                        <p class="!text-white">Lorem Ipsum</p>
+                <?php
+                $counts = [
+                    [
+                        'value' => '77 Years',
+                        'desc'  => 'of Collective Embined Experience'
+                    ],
+                    [
+                        'value' => '8,000+',
+                        'desc'  => 'Learning Hours'
+                    ],
+                    [
+                        'value' => '6,500+',
+                        'desc'  => 'Lives Touched'
+                    ]
+                ];
+                foreach ($counts as $i => $count): ?>
+                    <div class="count">
+                        <?php echo file_get_contents($img_path . '/count.svg'); ?>
+                        <div class="content gap-y-[12px] flex-col flex pe-[10px]">
+                            <span id="count<?= $i + 1 ?>"><?= $count['value'] ?></span>
+                            <p class="!text-white"><?= $count['desc'] ?></p>
+                        </div>
                     </div>
-                </div>
-                <div class="count">
-                    <?php
-                    echo file_get_contents($img_path . '/count.svg');
-                    ?>
-                    <div class="content gap-y-[12px] flex-col flex">
-                        <span id="count2"></span>
-                        <p class="!text-white">Lorem Ipsum</p>
-                    </div>
-                </div>
-                <div class="count">
-                    <?php
-                    echo file_get_contents($img_path . '/count.svg');
-                    ?>
-                    <div class="content gap-y-[12px] flex-col flex">
-                        <span id="count3"></span>
-                        <p class="!text-white">Lorem Ipsum</p>
-                    </div>
-                </div>
-                <div class="count">
-                    <?php
-                    echo file_get_contents($img_path . '/count.svg');
-                    ?>
-                    <div class="content gap-y-[12px] flex-col flex">
-                        <span id="count4"></span>
-                        <p class="!text-white">Lorem Ipsum</p>
-                    </div>
-                </div>
-                <div class="count">
-                    <?php
-                    echo file_get_contents($img_path . '/count.svg');
-                    ?>
-                    <div class="content gap-y-[12px] flex-col flex">
-                        <span id="count5"></span>
-                        <p class="!text-white">Lorem Ipsum</p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -526,7 +505,7 @@ $home_url = get_home_url();
         <div class="container-fluid">
             <div class="row">
                 <div class="w-full">
-                    <div class="header max-w-[650px]">
+                    <div class="header max-w-[650px] flex-col">
                         <h2 class="text-center">Testimonial</h2>
                         <p class="text-center">Hear directly from the organizations and individuals we've worked with—leaders, teams, and learners who’ve experienced the impact of SPARK’s programs. Their stories highlight how tailored, purpose-driven learning can create lasting change.</p>
                     </div>

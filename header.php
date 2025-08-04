@@ -22,7 +22,7 @@ $css_path = get_stylesheet_directory_uri() . '/inc/css'; ?>
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
             </button>
-            <div class="hidden w-full lg:block lg:w-auto max-h-[400px] overflow-y-auto" id="navbar-default">
+            <div class="hidden w-full lg:block lg:w-auto max-h-[400px] lg:max-h-full" id="navbar-default">
                 <?php
                 wp_nav_menu(array(
                     'menu' => 'Main Menu',

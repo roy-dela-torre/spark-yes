@@ -84,6 +84,7 @@ $(document).ready(function () {
         { min: 0, size: 1 }
     ]);
 
+
     // // Alert if page has missing H1
     // if ($('h1').length === 0) {
     //     alert('Warning: This page is missing an <h1> tag.');
@@ -157,5 +158,22 @@ $(document).ready(function () {
             $el.attr('tabindex', tabIndexCounter++);
         }
     });
+
+    $("#closeButton").click(function (e) {
+        var $video = $("#dialog video, #dialog iframe");
+        $video.each(function () {
+            // For <video> tags
+            if (this.tagName.toLowerCase() === "video") {
+                this.pause();
+                this.currentTime = 0;
+            }
+            // For <iframe> (e.g., YouTube/Vimeo embeds)
+            if (this.tagName.toLowerCase() === "iframe") {
+                var src = $(this).attr("src");
+                $(this).attr("src", src); // Reloads the iframe to stop playback
+            }
+        });
+    });
+
 
 });
