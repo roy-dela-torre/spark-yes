@@ -3,6 +3,4 @@ Akismet Anti-spam: Spam Protection
 Classic Editor
 Contact Form 7
 Contact Form CFDB7
-Hello Dolly
-W3 Total Cache
 Yoast SEO
