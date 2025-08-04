@@ -310,7 +310,7 @@ $home_url = get_home_url();
     <div class="wrapper">
         <div class="flex flex-wrap lg:flex-nowrap gap-[50px] mb-60">
             <div class="2xl:w-6/12 lg:w-5/12">
-                <div class="content">
+                <div class="content max-w-full lg:max-w-[650px]">
                     <h2>Our Story</h2>
                     <p>Founded in 2021 as Spark YES, a youth empowerment initiative led by ICF-certified coach Vjohn Dizon, the organization quickly earned recognition—including Google Education Partner status—for its impact on young leaders. In 2024, Spark YES evolved into SPARK | Learning & Development, expanding its focus to organizational transformation under the leadership of six JCI Manila practitioners with over 77 years of combined experience in corporate, startup, academe, and enterprise sectors.</p>
                     <p class="mb-[30px]">Today, SPARK partners with organizations such as Globe, Philippine Airlines, UnionBank, and Microsoft to deliver tailored programs that enhance operational efficiency, enrich organizational culture, and enliven customer experience—empowering multi-generational teams for sustainable growth.</p>
@@ -550,7 +550,7 @@ $home_url = get_home_url();
         <div class="flex items-center flex-wrap lg:flex-nowrap gap-[50px] contact_us_bg px-[30px] py-[40px] md:px-[70px] md:py-[60px] lg:px-[80px] lg:py-[80px] xl:px-[114px] xl:py-[150px] bg-white">
             <div class="lg:w-7/12 lg:pe-5">
                 <div class="form w-full py-[30px] px-[20px] md:p-[40px] max-w-full lg:max-w-[776px] border-t-[5px] border-[#ff4314] border-solid bg-[#FFFAF5]">
-                    <h3 class="mb-[30px]">Let’s Spark Growth Together</h3>
+                    <h3 class="!mb-[30px]">Let’s Spark Growth Together</h3>
                     <?= do_shortcode('[contact-form-7 id="20a6980" title="Contact Us (Home page)"]') ?>
                 </div>
             </div>

@@ -190,9 +190,16 @@ git remote set-url origin https://github.com/SEO-Hacker-Web-Dev/spark-yes.git
 To deploy from your local repository clone to the live theme directory:
 
 ```bash
+ssh -p 1988 sparkyesinnovnat@sparkyes.innovnational.com
 cd /home/sparkyesinnovnat/repositories/spark-yes  # Or wherever your repo is cloned
+git stash
+git pull origin main
+git stash pop
+git add .
+git commit -m "Saving changes before pull"
 git pull origin main
 /bin/rsync -a --exclude=".git" --exclude=".cpanel.yml" ./ /home/sparkyesinnovnat/public_html/wp-content/themes/spark-yes
+
 ```
 
 This ensures only tracked files are copied, excluding Git metadata and deployment config.

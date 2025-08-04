@@ -290,10 +290,6 @@ section.our_story .inquire_text a {
     line-height: 24px;
 }
 
-section.our_story .content {
-    max-width: 650px;
-}
-
 section.our_story .red_box {
     padding: 30px 60px;
     background: var(--Red, #FF4314);

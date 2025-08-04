@@ -2,7 +2,7 @@
 <el-dialog>
     <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
         <el-dialog-backdrop class="fixed inset-0 bg-[rgb(0_0_0_/_40%)] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
-        <div tabindex="0" class="flex min-h-full justify-center p-[20px] text-center focus:outline-none sm:items-center sm:p-0">
+        <div tabindex="0" class="flex min-h-full justify-center p-[20px] text-center focus:outline-none items-center sm:p-0">
             <el-dialog-panel class="relative transform overflow-hidden rounded-lg h-fit text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-[96%] max-w-[1200px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
                 <?= $video ?>
                 <button type="button" command="close" commandfor="dialog" class="absolute top-0 right-0 rounded-[50%] border-0" id="closeButton">
