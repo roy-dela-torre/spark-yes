@@ -306,9 +306,6 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
-  .mb-20 {
-    margin-bottom: calc(var(--spacing) * 20);
-  }
   .mb-60 {
     margin-bottom: calc(var(--spacing) * 60);
   }
@@ -587,9 +584,6 @@
   }
   .gap-y-\[30px\] {
     row-gap: 30px;
-  }
-  .gap-y-\[50\] {
-    row-gap: 50;
   }
   .gap-y-\[50px\] {
     row-gap: 50px;
@@ -1128,11 +1122,6 @@
       padding: 40px;
     }
   }
-  .md\:px-\[50px\] {
-    @media (width >= 48rem) {
-      padding-inline: 50px;
-    }
-  }
   .md\:px-\[70px\] {
     @media (width >= 48rem) {
       padding-inline: 70px;
@@ -1210,6 +1199,11 @@
   .lg\:gap-y-\[100px\] {
     @media (width >= 64rem) {
       row-gap: 100px;
+    }
+  }
+  .lg\:bg-black {
+    @media (width >= 64rem) {
+      background-color: var(--color-black);
     }
   }
   .lg\:px-\[80px\] {

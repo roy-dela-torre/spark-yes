@@ -120,37 +120,32 @@ $(document).ready(function () {
     //     }
     // });
 
-    var header = document.getElementById('mainHeader');
     var $header = $("header#mainHeader");
-    var isOpen = $header.hasClass("bg-black");
+    var $toggle = $("button#navbarToggle");
 
-    $("button#navbarToggle").click(function (e) {
+    // Handle toggle click
+    $toggle.click(function (e) {
         e.preventDefault();
-        isOpen = !isOpen;
-        if (isOpen) {
+        $header.toggleClass("menu-open"); // Add a state-tracking class
+
+        updateHeaderBackground();
+    });
+
+    // Handle scroll
+    window.addEventListener('scroll', updateHeaderBackground);
+
+    // Central function for managing background state
+    function updateHeaderBackground() {
+        var scrolled = window.scrollY > 0;
+        var isMenuOpen = $header.hasClass("menu-open");
+
+        if (scrolled || isMenuOpen) {
             $header.addClass("bg-black");
         } else {
             $header.removeClass("bg-black");
         }
-    });
+    }
 
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 0) {
-            header.classList.add('bg-black');
-        } else {
-            if (window.innerWidth < 1024) {
-                // Only toggle bg-black if not open
-                if (!isOpen) {
-                    $header.removeClass("bg-black");
-                }
-            } else {
-                // On desktop, remove bg-black only if not open
-                if (!isOpen) {
-                    $header.removeClass("bg-black");
-                }
-            }
-        }
-    });
 
 
     var interactiveSelectors = 'a, button, input, textarea, select, [tabindex]';

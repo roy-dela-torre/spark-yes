@@ -50,6 +50,10 @@ header#mainHeader ul.sub-menu>li a {
     white-space: pre;
 }
 
+header#mainHeader.menu-open{
+    background-color: black;
+}
+
 header#mainHeader ul.sub-menu>li>a:hover,
 header ul#menu-main-menu>li:hover>a {
     transition: .5s ease all;
