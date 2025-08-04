@@ -7,9 +7,9 @@
 
 ## Description
 
-**Theme Template** is a modern, developer-focused WordPress theme designed for flexibility and customization. Inspired by Shopify’s `theme.liquid` structure, it offers a modular layout, reusable components, and follows current best practices—all while staying lightweight and efficient.
+**Theme Template** is a modern, developer-focused WordPress theme built for flexibility and customization. Inspired by Shopify’s `theme.liquid` structure, it features a modular layout, reusable components, and follows current best practices—all while remaining lightweight and efficient.
 
-Perfect for blogs, business sites, or portfolios, this theme provides a solid foundation without unnecessary bloat. It’s compatible with popular plugins and optimized for speed and SEO.
+Ideal for blogs, business sites, or portfolios, this theme provides a solid foundation without unnecessary bloat. It’s compatible with popular plugins and optimized for speed and SEO.
 
 ---
 
@@ -62,18 +62,18 @@ Refer to each plugin’s documentation for installation and usage.
 To maximize performance and SEO:
 
 - **SEO-Friendly Headers:**  
-    Use semantic HTML header tags (`<h1>`, `<h2>`, etc.) in your templates. Ensure each page has a single `<h1>` and a logical heading structure for accessibility and SEO.
+   Use semantic HTML header tags (`<h1>`, `<h2>`, etc.) in your templates. Ensure each page has a single `<h1>` and a logical heading structure for accessibility and SEO.
 
 - **Image Optimization:**  
-    - Compress images before uploading  
-    - Keep image files under 500KB (never exceed 1MB)  
-    - Use modern formats like WebP  
-    - Add descriptive `alt` text for accessibility and SEO
+   - Compress images before uploading  
+   - Keep image files under 500KB (never exceed 1MB)  
+   - Use modern formats like WebP  
+   - Add descriptive `alt` text for accessibility and SEO
 
 - **Additional Tips:**  
-    - Use an SEO plugin (e.g., Yoast SEO or Rank Math) for meta tags and sitemaps  
-    - Minimize heavy plugins and scripts  
-    - Enable caching and use a CDN for faster load times
+   - Use an SEO plugin (e.g., Yoast SEO or Rank Math) for meta tags and sitemaps  
+   - Minimize heavy plugins and scripts  
+   - Enable caching and use a CDN for faster load times
 
 Following these practices will help keep your site fast, accessible, and search engine friendly.
 
@@ -97,95 +97,71 @@ $svg_path = get_stylesheet_directory_uri() . '/assets/svg/';
 echo file_get_contents($svg_path . 'search.svg');
 ```
 
+To build Tailwind CSS:
+
+```bash
 npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+```
 
+---
 
-==============================
-Spark-Yes Theme Git Deployment
-==============================
+## Git Deployment with cPanel
 
 This project uses Git for version control and cPanel's Git Deployment system to deploy directly to the live WordPress theme folder.
 
--------------------------
-🛠 SETUP REQUIREMENTS
--------------------------
+### Setup Requirements
 
-1. Git repository is initialized inside the theme folder:
-   wp-content/themes/spark-yes/
-
+1. Git repository is initialized inside the theme folder:  
+    `wp-content/themes/spark-yes/`
 2. A valid `.cpanel.yml` file is committed at the root of the theme.
-
 3. The remote server has no uncommitted or unstaged changes in its Git working directory.
-
 4. SSH access is enabled on the server and Git is installed.
 
--------------------------
-🚀 DEPLOYMENT WORKFLOW
--------------------------
+### Deployment Workflow
 
-👉 RECOMMENDED FLOW:
+**Recommended Flow:**
 - Code locally
 - Push to GitHub
 - Pull on the server (auto or manual)
 
 Example:
 
-1. Make changes locally:
+```bash
+# Make changes locally
+git add .
+git commit -m "Your commit message"
 
-   $ git add .
-   $ git commit -m "Your commit message"
+# Push to GitHub
+git push origin main
 
-2. Push to GitHub:
+# On the server, auto-deploy will run IF `.cpanel.yml` exists and no changes are pending.
+# Otherwise, SSH in and run:
+cd ~/public_html/wp-content/themes/spark-yes
+git pull origin main
 
-   $ git push origin main
+# If Git refuses to pull or push (due to local server changes):
+git reset --hard
+git pull origin main
+```
 
-3. On the server, auto-deploy will run IF `.cpanel.yml` exists and no changes are pending.
-   Otherwise, SSH in and run:
+### .cpanel.yml Example
 
-   $ cd ~/public_html/wp-content/themes/spark-yes
-   $ git pull origin main
+Place this file in: `wp-content/themes/spark-yes/.cpanel.yml`
 
-4. If Git refuses to pull or push (due to local server changes):
-
-   $ git reset --hard
-   $ git pull origin main
-
--------------------------
-⚙️ .cpanel.yml CONTENT
--------------------------
-
-Place this file in: wp-content/themes/spark-yes/.cpanel.yml
-
----
+```yaml
 deployment:
-  tasks:
-    - export DEPLOYPATH=/home/sparkyesinnovnat/public_html/wp-content/themes/spark-yes
-    - /bin/cp -r * $DEPLOYPATH
+   tasks:
+      - export DEPLOYPATH=/home/sparkyesinnovnat/public_html/wp-content/themes/spark-yes
+      - /bin/cp -r * $DEPLOYPATH
+```
 
 This script copies all theme files to the live path after a Git pull.
 
--------------------------
-📄 .gitignore RECOMMENDATION
--------------------------
+### .gitignore Recommendation
 
-Include a `.gitignore` file with the following:
+Include a `.gitignore` file to avoid committing unnecessary files.
 
-ssh -p 1988 sparkyesinnovnat@sparkyes.innovnational.com
-
-cd /home/sparkyesinnovnat/public_html/wp-content/themes/spark-yes
-
-git status
-
-git add .
-git commit -m "Temporary changes on server"
-
-git push origin main
-
-git remote set-url origin https://github.com/SEO-Hacker-Web-Dev/spark-yes.git
-
--------------------------
-🔄 MANUAL DEPLOYMENT VIA RSYNC
--------------------------
+### Manual Deployment via rsync
 
 To deploy from your local repository clone to the live theme directory:
 
@@ -199,7 +175,17 @@ git add .
 git commit -m "Saving changes before pull"
 git pull origin main
 /bin/rsync -a --exclude=".git" --exclude=".cpanel.yml" ./ /home/sparkyesinnovnat/public_html/wp-content/themes/spark-yes
-
 ```
 
 This ensures only tracked files are copied, excluding Git metadata and deployment config.
+
+---
+
+**For GitHub repo:**
+
+```bash
+git status
+git add .
+git commit -m "update"
+git push origin main
+```
