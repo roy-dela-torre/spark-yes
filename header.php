@@ -11,7 +11,7 @@ $css_path = get_stylesheet_directory_uri() . '/inc/css'; ?>
 </head>
 
 <body <?php echo body_class(); ?>>
-    <header class="fixed sm:py-[10px] top-0 left-0 w-full z-50 border-solid border-[1px] lg:bg-black" style="border-color: rgba(255, 255, 255, 0.10);" id="mainHeader">
+    <header class="fixed sm:py-[10px] top-0 left-0 w-full z-50 border-solid border-[1px]" style="border-color: rgba(255, 255, 255, 0.10);" id="mainHeader">
         <nav class="flex flex-wrap items-center justify-between mx-auto border-white/10">
             <a href="<?php echo get_home_url(); ?>" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img loading="laxy" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/global/header_logo.png" class="w-[143px] h-[50px] object-contain" alt="Spark Yes" />

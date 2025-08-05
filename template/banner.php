@@ -4,7 +4,7 @@ $banner_data = isset($args) ? $args : [];
 <section class="<?= esc_attr($banner_data['banner_class'] ?? '') ?>" style="background: url('<?= esc_attr($banner_data['banner_background_image'] ?? '') ?>')no-repeat center center/cover">
     <div class="wrapper">
         <div class="flex flex-wrap">
-            <div class="max-w-[<?= esc_attr($banner_data['content_width']) ?>]">
+            <div class="max-w-[776px]">
                 <?php if (!empty($banner_data['banner_header'])): ?>
                     <h1 class="text-white mb-[15px]"><?= esc_html($banner_data['banner_header']) ?></h1>
                 <?php endif; ?>

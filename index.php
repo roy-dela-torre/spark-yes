@@ -52,17 +52,17 @@ $home_url = get_home_url();
                 </div>
             </div>
             <div class="soc_med flex gap-x-[15px] align-center">
-                <a href="http://facebook.com" target="_blank" rel="noopener noreferrer" class="flex-center-center" aria-label="Facebook">
+                <a href="http://fb.com/sparkyesph" target="_blank" rel="noopener noreferrer" class="flex-center-center" aria-label="Facebook">
                     <?php
                     echo file_get_contents($img_path . '/facebook.svg');
                     ?>
                 </a>
-                <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex-center-center" aria-label="LinkedIn">
+                <a href="http://linkedin.com/company/spark-yes" target="_blank" rel="noopener noreferrer" class="flex-center-center" aria-label="LinkedIn">
                     <?php
                     echo file_get_contents($img_path . '/linkedin.svg');
                     ?>
                 </a>
-                <a href="http://instagram.com" target="_blank" rel="noopener noreferrer" class="flex-center-center" aria-label="Instagram">
+                <a href="https://www.instagram.com/sparkyesph/" target="_blank" rel="noopener noreferrer" class="flex-center-center" aria-label="Instagram">
                     <?php
                     echo file_get_contents($img_path . '/instagram.svg');
                     ?>

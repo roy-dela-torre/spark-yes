@@ -3,4 +3,5 @@ Akismet Anti-spam: Spam Protection
 Classic Editor
 Contact Form 7
 Contact Form CFDB7
+Copy & Delete Posts
 Yoast SEO
