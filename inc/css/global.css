@@ -63,3 +63,23 @@ footer span {
 section .owl-theme .owl-nav.disabled+.owl-dots {
   margin-top: 0;
 }
+
+#pagination span.page-numbers.current {
+  color: var(--Red, hsl(12, 100%, 54%));
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  /* 150% */
+}
+
+#pagination a.page-numbers {
+  color: var(--P, #333);
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  /* 150% */
+}
