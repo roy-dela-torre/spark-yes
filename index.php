@@ -181,7 +181,7 @@ $home_url = get_home_url();
                         <p class="text-center">SPARK combines a deep heritage in youth empowerment with cutting-edge organizational development expertise, delivered by coaches with over 77 years of combined industry experience. Its subscription-based, data-driven approach ensures customized programs and ongoing support for measurable, sustainable impact across multi-generational teams.</p>
                     </div>
                 </div>
-                <div class="grid_box gap-[24px] w-full mb-60">
+                <div class="grid_box_4 gap-[24px] w-full mb-60">
                     <?php
                     $apart_cards = [
                         [
