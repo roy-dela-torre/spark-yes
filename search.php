@@ -1,13 +1,6 @@
 <?php get_header();
 global $wp_query;
 $s = sanitize_text_field(get_query_var('s'));
-$banner_data = [
-    'banner_header' => get_field('banner_header'),
-    'banner_content' => get_field('banner_content'),
-    'banner_background_image' => get_field('banner_background_image'),
-    'banner_class' => 'min-h-[600px] flex flex-col justify-center section_padding',
-];
-get_template_part('template/banner', null, $banner_data);
 
 // Set your desired post type or use 'post' as default
 $post_type = 'post';
@@ -23,10 +16,14 @@ $args = [
 
 $search_query = new WP_Query($args);
 ?>
+<section class="banner">
+    <div class="wrapper">
+        <h1><?php printf(esc_html__('Search Results for: %s', 'template'), '<span>' . esc_html(get_search_query()) . '</span>'); ?></h1>
+    </div>
+</section>
 <section class="section_padding" id="search_results">
     <div class="wrapper">
         <?php if ($search_query->have_posts()) : ?>
-            <h2><?php printf(esc_html__('Search Results for: %s', 'template'), '<span>' . esc_html(get_search_query()) . '</span>'); ?></h2>
             <div class="grid_box_3 gap-[24px] w-full mb-60">
                 <?php while ($search_query->have_posts()) : $search_query->the_post(); ?>
                     <?php

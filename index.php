@@ -560,6 +560,10 @@ $home_url = get_home_url();
                     <p class="mb-60">Let’s talk about what’s holding your team back—and what’s possible with the right learning experience. Send us a message, and we’ll co-create a program that aligns with your goals and delivers real results.</p>
                     <div class="contacts flex-col flex gap-y-[30px]">
                         <div class="flex-col flex gap-y-[10px]">
+                            <?php echo file_get_contents($img_path . 'user.svg') ?>
+                            <p>Prince M. Datu</p>
+                        </div>
+                        <div class="flex-col flex gap-y-[10px]">
                             <?php echo file_get_contents($img_path . 'email.svg') ?>
                             <a href="mailto:operations@sparkeyesph.com">operations@sparkeyesph.com</a>
                         </div>
