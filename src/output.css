@@ -1208,6 +1208,11 @@
       width: calc(5/12 * 100%);
     }
   }
+  .lg\:w-6\/12 {
+    @media (width >= 64rem) {
+      width: calc(6/12 * 100%);
+    }
+  }
   .lg\:w-7\/12 {
     @media (width >= 64rem) {
       width: calc(7/12 * 100%);
