@@ -1,103 +1,82 @@
-﻿=== Theme Name ===
+﻿# Spark Yes — WordPress Theme
+
 ## Contributors
 
-*Add your name or GitHub username here.*
+- Roy Dela Torre ([@delatoreroy-pdm](https://github.com/delatoreroy-pdm))
+- _Add your name or GitHub username here._
 
 ---
 
 ## Description
 
-**Theme Template** is a modern, developer-focused WordPress theme built for flexibility and customization. Inspired by Shopify’s `theme.liquid` structure, it features a modular layout, reusable components, and follows current best practices—all while remaining lightweight and efficient.
-
-Ideal for blogs, business sites, or portfolios, this theme provides a solid foundation without unnecessary bloat. It’s compatible with popular plugins and optimized for speed and SEO.
+Spark Yes is a modern, developer-focused WordPress theme built for flexibility and customization. It follows best practices, stays lean, and works well with popular plugins. Optimized for speed and SEO, it’s a solid base for blogs, business sites, and portfolios.
 
 ---
 
 ## Installation
 
-1. Upload the theme folder to `/wp-content/themes/`
-2. In your WordPress dashboard, go to Appearance > Themes
-3. Activate the theme
+1. Upload the `spark-yes` folder to `/wp-content/themes/`.
+2. In WordPress: **Appearance → Themes**
+3. Activate **Spark Yes**
 
 ---
 
 ## Changelog
 
 ### 1.0.0
+
 - Initial release
 
 ---
 
 ## Credits
 
-- **normalize.css** – Nicolas Gallagher (MIT License)
+- [normalize.css](https://necolas.github.io/normalize.css/) — Nicolas Gallagher (MIT)
 
 ---
 
 ## License
 
-This theme is licensed under GPL v2 or later.
+GPL v2 or later.
 
 ---
 
 ## Recommended Plugins
 
-Enhance your site’s functionality with these plugins:
-
-- **Advanced Contact Form 7** – Adds advanced features to Contact Form 7
-- **Contact Form 7 Database Addon (CFDB7)** – Saves form submissions to the database
-- **Contact Form 7 Redirection** – Redirects users after form submission
-- **Redirection** – Manages 301 redirects and tracks 404 errors
-- **Better Search Replace** – Search and replace data in your database
-- **Advanced Custom Fields (ACF)** – Add custom fields to posts and pages
-- **Custom Post Type UI** – Create and manage custom post types and taxonomies
-- **Yoast SEO** – Comprehensive SEO toolkit
-
-Refer to each plugin’s documentation for installation and usage.
+- Advanced Contact Form 7
+- CFDB7 (Contact Form 7 Database Addon)
+- Contact Form 7 Redirection
+- Redirection
+- Better Search Replace
+- Advanced Custom Fields (ACF)
+- Custom Post Type UI
+- Yoast SEO
 
 ---
 
 ## Optimization Tips
 
-To maximize performance and SEO:
-
-- **SEO-Friendly Headers:**  
-   Use semantic HTML header tags (`<h1>`, `<h2>`, etc.) in your templates. Ensure each page has a single `<h1>` and a logical heading structure for accessibility and SEO.
-
-- **Image Optimization:**  
-   - Compress images before uploading  
-   - Keep image files under 500KB (never exceed 1MB)  
-   - Use modern formats like WebP  
-   - Add descriptive `alt` text for accessibility and SEO
-
-- **Additional Tips:**  
-   - Use an SEO plugin (e.g., Yoast SEO or Rank Math) for meta tags and sitemaps  
-   - Minimize heavy plugins and scripts  
-   - Enable caching and use a CDN for faster load times
-
-Following these practices will help keep your site fast, accessible, and search engine friendly.
+- **Headings:** One `<h1>` per page; use semantic `<h2>`…`<h6>` for structure.
+- **Images:** Compress before upload, prefer WebP, keep under ~500KB, add descriptive alt.
+- **Performance:** Use caching + CDN; keep plugins minimal.
 
 ---
 
 ## Template File Guidance
 
-To create custom templates for custom post types, use these naming conventions:
+**Custom post type templates:**
 
-- `single-slug.php` – For single post type entries
-- `archive-slug.php` – For post type archives
+- `single-{slug}.php` — single entry
+- `archive-{slug}.php` — archive
 
-Replace `slug` with your custom post type’s slug.
-
-For `stylesheet-manager.php` and `script-manager.php`, review the files and remove any unnecessary or unused template code. Some styles or scripts are included only for demonstration—feel free to delete anything not needed for your implementation.
-
-To keep your code clean when using SVGs, use the following example:
+**Inline SVG helper:**
 
 ```php
 $svg_path = get_stylesheet_directory_uri() . '/assets/svg/';
 echo file_get_contents($svg_path . 'search.svg');
 ```
 
-To build Tailwind CSS:
+**Build Tailwind CSS:**
 
 ```bash
 npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
@@ -105,83 +84,93 @@ npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 
 ---
 
-## Git Deployment with cPanel
+## Git + cPanel Deployment
 
-This project uses Git for version control and cPanel's Git Deployment system to deploy directly to the live WordPress theme folder.
+This theme uses cPanel → Git Version Control to deploy directly to the live theme folder.
 
-### Setup Requirements
+- **Repo location on server:**  
+   `/home/sparkyesinnovat/public_html/wp-content/themes/spark-yes`
 
-1. Git repository is initialized inside the theme folder:  
-    `wp-content/themes/spark-yes/`
-2. A valid `.cpanel.yml` file is committed at the root of the theme.
-3. The remote server has no uncommitted or unstaged changes in its Git working directory.
-4. SSH access is enabled on the server and Git is installed.
+### Requirements
+
+- Git repo initialized in the path above
+- Valid `.cpanel.yml` at the repo root
+- Working tree clean (no uncommitted or untracked files)
+- SSH + Git enabled on the server
 
 ### Deployment Workflow
 
-**Recommended Flow:**
-- Code locally
-- Push to GitHub
-- Pull on the server (auto or manual)
-
-Example:
+**Local (developer machine):**
 
 ```bash
-# Make changes locally
 git add .
-git commit -m "Your commit message"
-
-# Push to GitHub
+git commit -m "Your message"
 git push origin main
-
-# On the server, auto-deploy will run IF `.cpanel.yml` exists and no changes are pending.
-# Otherwise, SSH in and run:
-cd ~/public_html/wp-content/themes/spark-yes
-git pull origin main
-
-# If Git refuses to pull or push (due to local server changes):
-git reset --hard
-git pull origin main
 ```
 
-### .cpanel.yml Example
-
-Place this file in: `wp-content/themes/spark-yes/.cpanel.yml`
-
-```yaml
-deployment:
-   tasks:
-      - export DEPLOYPATH=/home/sparkyesinnovnat/public_html/wp-content/themes/spark-yes
-      - /bin/cp -r * $DEPLOYPATH
-```
-
-This script copies all theme files to the live path after a Git pull.
-
-### .gitignore Recommendation
-
-Include a `.gitignore` file to avoid committing unnecessary files.
-
-### Manual Deployment via rsync
-
-To deploy from your local repository clone to the live theme directory:
+**Server (if auto-deploy is off or UI won’t enable Deploy):**
 
 ```bash
-ssh -p 1988 sparkyesinnovnat@sparkyes.innovnational.com
-cd /home/sparkyesinnovnat/repositories/spark-yes  # Or wherever your repo is cloned
-git stash
-git pull origin main
-git stash pop
-git add .
-git commit -m "Saving changes before pull"
-git pull origin main
-/bin/rsync -a --exclude=".git" --exclude=".cpanel.yml" ./ /home/sparkyesinnovnat/public_html/wp-content/themes/spark-yes
+cd ~/public_html/wp-content/themes/spark-yes
+git fetch origin
+git reset --hard origin/main
+git clean -fd         # add -fxd to also remove ignored files
+git pull
 ```
 
-This ensures only tracked files are copied, excluding Git metadata and deployment config.
+Then in cPanel → Git Version Control:  
+Click **Update from Remote → Deploy HEAD Commit**.
 
 ---
 
-**For GitHub repo:**
+## .cpanel.yml (repo root)
+
+```yaml
+---
+deployment:
+   tasks:
+      - /bin/echo "Deploying spark-yes theme..."
+```
+
+Because the repo is the live theme directory, no copy/rsync step is needed.
+
+---
+
+## .gitignore (recommended)
+
+```gitignore
+node_modules/
+cache/
+*.log
+*.sql
+*.zip
+vendor/
+.env
+.DS_Store
+```
+
+---
+
+## Troubleshooting Deployment
+
+If cPanel shows “The system cannot deploy”:
+
+1. Ensure `.cpanel.yml` exists in `/wp-content/themes/spark-yes/`.
+2. Clean the working tree:
+
+      ```bash
+      cd ~/public_html/wp-content/themes/spark-yes
+      git status
+      git reset --hard origin/main
+      git clean -fd      # or -fxd if needed
+      git pull
+      ```
+
+3. Hard refresh the cPanel page, click **Update from Remote**, then **Deploy HEAD Commit**.
+
+---
+
+## GitHub Quick Commands
 
 ```bash
 git status
