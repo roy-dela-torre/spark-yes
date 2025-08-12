@@ -178,3 +178,6 @@ git add .
 git commit -m "update"
 git push origin main
 ```
+
+ssh sparkyesinnovnat@sparkyes.innovnational.com -p 1988
+cd /home/sparkyesinnovnat/public_html/wp-content/themes/spark-yes
