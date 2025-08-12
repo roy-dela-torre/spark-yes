@@ -8,7 +8,7 @@ $link       = $args['link'] ?? '#';
 $link_text  = $args['link_text'] ?? 'Learn More';
 ?>
 
-<article class="item p-[30px] my-[10px] flex flex-col justify-end min-h-[380px] hover:@red_btn">
+<article class="item p-[30px] my-[10px] flex flex-col justify-end">
     <div class="content">
         <div class="svg">
             <?php
@@ -24,7 +24,7 @@ $link_text  = $args['link_text'] ?? 'Learn More';
     </div>
     <a href="<?= esc_url($link) ?>"
         aria-label="<?= esc_attr($link_text) ?>"
-        class="red_btn mt-[30px] opacity-100 transition-all duration-500 ease-in-out item-hover:opacity-80 item-hover:underline">
+        class="red_btn mt-[30px]">
         <?= esc_html($link_text) ?>
     </a>
 </article>

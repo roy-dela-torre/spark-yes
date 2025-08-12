@@ -145,26 +145,6 @@ p {
     @apply text-[16px] font-light leading-[24px] not-italic text-[#333] mb-[1em] last:mb-0;
 }
 
-.item:hover a {
-    @apply animate-[mt-animate] opacity-100 relative mt-[30px];
-    animation: mt-animate 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    -webkit-animation: mt-animate 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes mt-animate {
-    from {
-        margin-top: 0;
-    }
-
-    to {
-        margin-top: 30px;
-    }
-}
-
-.item a {
-    @apply absolute opacity-0;
-}
-
 .grid_box_4 {
     @apply grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
 }

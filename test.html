@@ -1,0 +1,135 @@
+<div class="print_data">
+    <div class="header">
+        <div class="image mx-auto">
+            <img src="<?= $img_path; ?>/Request for release of Original Certificate of Registration (CR).jpg"
+                alt="<?= the_title() ?>">
+        </div>
+        <h2 class="text-center">Request for release of Original Certificate of Registration (CR)</h2>
+    </div>
+    <div class="step">
+        <span>Loan Borrower Information </span>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form_group">
+                    <label for="loan_account_number">10 Digit Loan Account Number</label>
+                    <input type="text" id="loan_account_number" name="loan_account_number" maxlength="10"
+                        pattern="\d{10}" required>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form_group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form_group">
+                    <label for="middle_name">Middle Name</label>
+                    <input type="text" id="middle_name" name="middle_name">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form_group">
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="step">
+    <span>Contact Information </span>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form_group">
+                <label for="primary_mobile_number">Primary Mobile Number</label>
+                <input type="tel" id="primary_mobile_number" name="primary_mobile_number" pattern="\d{11}"
+                    maxlength="11" required>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form_group">
+                <label for="primary_mobile_number">Primary Mobile Number</label>
+                <input type="tel" id="primary_mobile_number" name="primary_mobile_number" pattern="\d{11}"
+                    maxlength="11" required>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form_group">
+                <label for="primary_mobile_number">Primary Mobile Number</label>
+                <input type="tel" id="primary_mobile_number" name="primary_mobile_number" pattern="\d{11}"
+                    maxlength="11" required>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="step">
+    <span>Last Payment Details</span>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form_group">
+                <label for="receipt_date">Receipt Date</label>
+                <input type="date" id="receipt_date" name="receipt_date" required>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form_group">
+                <label for="receipt_number_2">Receipt Number</label>
+                <input type="text" id="receipt_number_2" name="receipt_number_2" required>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form_group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" step="0.01" required>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="step">
+    <span>Preferred Pick-Up Location (Dealer Branch / Bank of Makati Branch)</span>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form_group">
+                <label for="pickup_location">Pick-Up Location</label>
+                <input type="text" id="pickup_location" name="pickup_location" required>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form_group">
+                <label for="area">Area</label>
+                <input type="text" id="area" name="area" required>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form_group">
+                <label for="bmi_branch">BMI Branches</label>
+                <input type="text" id="bmi_branch" name="bmi_branch" required>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="step">
+    <span>Remarks Portion</span>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form_group">
+                <label for="remarks">Remarks</label>
+                <textarea id="remarks" name="remarks" rows="4"></textarea>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form_group">
+                <label for="copy_of_certificate">Do you want a copy of Certificate of Full Payment?</label>
+                <select id="copy_of_certificate" name="copy_of_certificate" required>
+                    <option value="">Please select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="orange_btn" id="print_data">Print</button>
+</div>

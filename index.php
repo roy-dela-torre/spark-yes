@@ -274,9 +274,9 @@ $home_url = get_home_url();
                     'img' => 'Bryan Zafra.jpg',
                 ],
                 [
-                    'name' => 'Caloy Capacillov',
+                    'name' => 'Caloy Capacillo',
                     'title' => 'Serial Entrepreneur & Certified Securities Representative',
-                    'img' => 'Caloy Capacillov.jpg',
+                    'img' => 'Caloy Capacillo.jpg',
                 ],
                 [
                     'name' => 'Lec Toribio',

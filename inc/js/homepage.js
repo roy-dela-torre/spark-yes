@@ -201,9 +201,9 @@ $(document).ready(function () {
     ]);
 
 
-    $("section.core_programs .item").each(function () { 
-        var currentHeight = $(this).outerHeight(); // includes padding & border
-        var newHeight = currentHeight + 78; // Adjusted height
-        $(this).css('min-height', newHeight + 'px');
-    });
+    // $("section.core_programs .item").each(function () { 
+    //     var currentHeight = $(this).outerHeight(); // includes padding & border
+    //     var newHeight = currentHeight + 78; // Adjusted height
+    //     $(this).css('min-height', newHeight + 'px');
+    // });
 });

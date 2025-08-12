@@ -285,6 +285,9 @@
   .my-\[10px\] {
     margin-block: 10px;
   }
+  .ms-2 {
+    margin-inline-start: calc(var(--spacing) * 2);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -314,6 +317,12 @@
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-30 {
+    margin-bottom: calc(var(--spacing) * 30);
   }
   .mb-60 {
     margin-bottom: calc(var(--spacing) * 60);
@@ -396,9 +405,6 @@
   }
   .min-h-\[350px\] {
     min-height: 350px;
-  }
-  .min-h-\[380px\] {
-    min-height: 380px;
   }
   .min-h-\[600px\] {
     min-height: 600px;
@@ -548,6 +554,9 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-\[20px\] {
     gap: 20px;
@@ -924,14 +933,6 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .duration-500 {
-    --tw-duration: 500ms;
-    transition-duration: 500ms;
-  }
-  .ease-in-out {
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
-  }
   .ease-out {
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
@@ -1206,11 +1207,6 @@
   .lg\:w-5\/12 {
     @media (width >= 64rem) {
       width: calc(5/12 * 100%);
-    }
-  }
-  .lg\:w-6\/12 {
-    @media (width >= 64rem) {
-      width: calc(6/12 * 100%);
     }
   }
   .lg\:w-7\/12 {
@@ -1702,26 +1698,6 @@ p {
     margin-bottom: calc(var(--spacing) * 0);
   }
 }
-.item:hover a {
-  position: relative;
-  margin-top: 30px;
-  animation: mt-animate;
-  opacity: 100%;
-  animation: mt-animate 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  -webkit-animation: mt-animate 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-@keyframes mt-animate {
-  from {
-    margin-top: 0;
-  }
-  to {
-    margin-top: 30px;
-  }
-}
-.item a {
-  position: absolute;
-  opacity: 0%;
-}
 .grid_box_4 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1957,11 +1933,11 @@ p {
   syntax: "*";
   inherits: false;
 }
-@property --tw-duration {
+@property --tw-ease {
   syntax: "*";
   inherits: false;
 }
-@property --tw-ease {
+@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
@@ -2023,8 +1999,8 @@ p {
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
-      --tw-duration: initial;
       --tw-ease: initial;
+      --tw-duration: initial;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
